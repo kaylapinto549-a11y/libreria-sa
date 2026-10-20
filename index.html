@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b70">
+  <meta name="description" content="Librería Escolar El Saber en Canalete, Córdoba. Cuadernos, libros, papelería y tecnología.">
+  <title>El Saber | Librería Escolar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="barra-superior">
+    <p>📚 Todo para aprender, crear y crecer</p>
+    <span>📍 Canalete, Córdoba</span>
+  </div>
+
+  <header class="encabezado">
+    <a href="#inicio" class="marca">
+      <span class="marca-icono">E<span>S</span></span>
+      <span class="marca-texto">EL SABER<small>LIBRERÍA ESCOLAR</small></span>
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="boton-carrito" id="abrirLista" aria-label="Abrir mi lista de compras">
+      <span>🛍️</span> Mi lista <b id="contador">0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-fondo-decorativo"></div>
+
+      <div class="hero-texto">
+        <span class="sobrelinea"><span></span> TU MUNDO DE CONOCIMIENTO</span>
+        <h1>Grandes ideas<br>comienzan con <span>El Saber.</span></h1>
+        <p>Todo lo que necesitas para estudiar, imaginar y crear. Descubre nuestros útiles escolares, libros y accesorios favoritos.</p>
+
+        <div class="hero-botones">
+          <a href="#catalogo" class="btn btn-azul">Explorar catálogo <span>↗</span></a>
+          <a href="#contacto" class="btn btn-ligero">Conócenos</a>
+        </div>
+
+        <div class="hero-datos">
+          <div><strong>📚</strong><span>Libros y<br>cuadernos</span></div>
+          <div><strong>✏️</strong><span>Útiles para<br>crear</span></div>
+          <div><strong>💻</strong><span>Accesorios<br>tecnológicos</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-foto-principal">
+          <img
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
+            alt="Materiales de estudio sobre una mesa"
+          >
+        </div>
+        <div class="hero-etiqueta hero-etiqueta-arriba">
+          <span>✦</span>
+          <div><strong>Aprender es crecer</strong><small>Un día a la vez</small></div>
+        </div>
+        <div class="hero-etiqueta hero-etiqueta-abajo">
+          <span class="circulo-amarillo">✎</span>
+          <div><small>Inspira tus ideas</small><strong>¡Crea sin límites!</strong></div>
+        </div>
+        <div class="hero-punto punto-uno"></div>
+        <div class="hero-punto punto-dos"></div>
+      </div>
+    </section>
+
+    <section class="franja-categorias">
+      <a href="#catalogo" data-ir-categoria="cuadernos"><span>📒</span><div><strong>Cuadernos</strong><small>Organiza tus ideas</small></div><b>↗</b></a>
+      <a href="#catalogo" data-ir-categoria="libros"><span>📚</span><div><strong>Libros</strong><small>Descubre historias</small></div><b>↗</b></a>
+      <a href="#catalogo" data-ir-categoria="papeleria"><span>✂️</span><div><strong>Papelería</strong><small>Deja volar tu creatividad</small></div><b>↗</b></a>
+      <a href="#catalogo" data-ir-categoria="tecnologia"><span>💻</span><div><strong>Tecnología</strong><small>Conecta con el saber</small></div><b>↗</b></a>
+    </section>
+
+    <section class="catalogo seccion" id="catalogo">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="sobrelinea"><span></span> DESCUBRE NUESTRO CATÁLOGO</span>
+          <h2>Todo para tu próxima <span>gran idea.</span></h2>
+          <p>Encuentra tus favoritos y agrégalos a tu lista de compras.</p>
+        </div>
+        <div class="sello-catalogo"><span>✦</span><small>ESTUDIA</small><strong>CREA</strong><small>Y SUEÑA</small></div>
+      </div>
+
+      <div class="busqueda-contenedor">
+        <label class="busqueda">
+          <span>⌕</span>
+          <input id="busqueda" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar en el catálogo">
+          <kbd>Buscar</kbd>
+        </label>
+        <label class="selector-categoria">
+          <span>Filtrar por:</span>
+          <select id="filtroCategoria" aria-label="Filtrar por categoría">
+            <option value="todos">Todas las categorías</option>
+            <option value="cuadernos">Cuadernos</option>
+            <option value="libros">Libros</option>
+            <option value="papeleria">Papelería</option>
+            <option value="tecnologia">Tecnología</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filtros" id="botonesCategoria">
+        <button class="filtro activo" data-categoria="todos">Todos los productos</button>
+        <button class="filtro" data-categoria="cuadernos">📒 Cuadernos</button>
+        <button class="filtro" data-categoria="libros">📚 Libros</button>
+        <button class="filtro" data-categoria="papeleria">✏️ Papelería</button>
+        <button class="filtro" data-categoria="tecnologia">💻 Tecnología</button>
+      </div>
+
+      <div class="catalogo-resumen">
+        <p id="resultado">Explora nuestros productos</p>
+        <span>Precios en pesos colombianos (COP)</span>
+      </div>
+
+      <div class="productos-grid" id="productosGrid"></div>
+
+      <div class="sin-resultados" id="sinResultados" hidden>
+        <span>🔎</span>
+        <h3>No encontramos ese producto</h3>
+        <p>Prueba con otro nombre o selecciona una categoría diferente.</p>
+        <button class="btn btn-azul" id="limpiarBusqueda">Ver todos los productos</button>
+      </div>
+    </section>
+
+    <section class="banner-ideas">
+      <div class="banner-ilustracion" aria-hidden="true">
+        <span>✏️</span><span>📐</span><span>📘</span>
+      </div>
+      <div>
+        <span class="sobrelinea">CADA DÍA ES UNA OPORTUNIDAD</span>
+        <h2>Prepara tus útiles.<br>¡Prepárate para brillar!</h2>
+        <p>Los grandes logros comienzan con pequeñas ideas.</p>
+      </div>
+      <a href="#catalogo" class="btn btn-amarillo">Elegir mis útiles ↗</a>
+    </section>
+
+    <section class="nosotros seccion" id="nosotros">
+      <div class="nosotros-foto">
+        <img
+          src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=85"
+          alt="Estantería de libros para aprender y explorar"
+          loading="lazy"
+        >
+        <div class="foto-insignia"><span>ES</span><small>CONOCIMIENTO<br>PARA TODOS</small></div>
+      </div>
+      <div class="nosotros-texto">
+        <span class="sobrelinea"><span></span> SOMOS EL SABER</span>
+        <h2>Un lugar para descubrir, aprender y <span>soñar.</span></h2>
+        <p>En Librería Escolar El Saber creemos que cada cuaderno, cada libro y cada nueva idea pueden abrir las puertas a grandes oportunidades.</p>
+        <p>Queremos acompañar a estudiantes, familias y docentes con materiales escolares, libros y herramientas para el aprendizaje.</p>
+        <div class="nosotros-puntos">
+          <p><span>✓</span> Variedad de útiles escolares</p>
+          <p><span>✓</span> Productos para estudiar y crear</p>
+          <p><span>✓</span> Atención por WhatsApp</p>
+        </div>
+        <a href="#contacto" class="btn btn-azul">Encuéntranos ↗</a>
+      </div>
+    </section>
+
+    <section class="contacto seccion" id="contacto">
+      <div class="contacto-caja">
+        <div class="contacto-texto">
+          <span class="sobrelinea">ESTAMOS PARA AYUDARTE</span>
+          <h2>¡Tu próxima compra escolar comienza aquí!</h2>
+          <p>Comunícate con nosotros para consultar precios, productos y disponibilidad.</p>
+          <a href="https://wa.me/573001640580" target="_blank" rel="noopener noreferrer" class="btn btn-amarillo">💬 Escríbenos por WhatsApp</a>
+        </div>
+        <div class="contacto-datos">
+          <div class="dato-contacto"><span>📍</span><div><small>UBICACIÓN</small><strong>Canalete, Córdoba</strong><p>Colombia</p></div></div>
+          <div class="dato-contacto"><span>📱</span><div><small>WHATSAPP</small><strong>300 164 0580</strong><p>Consultas y pedidos</p></div></div>
+          <div class="dato-contacto"><span>📚</span><div><small>TE ACOMPAÑAMOS</small><strong>Librería Escolar El Saber</strong><p>Aprender, crear y crecer.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <a href="#inicio" class="marca marca-pie">
+      <span class="marca-icono">E<span>S</span></span>
+      <span class="marca-texto">EL SABER<small>LIBRERÍA ESCOLAR</small></span>
+    </a>
+    <p>El conocimiento abre caminos. © <span id="anio"></span> El Saber.</p>
+    <a href="#inicio" class="volver-arriba">Volver arriba ↑</a>
+  </footer>
+
+  <div class="fondo-panel" id="fondoPanel"></div>
+
+  <aside class="panel-lista" id="panelLista" aria-label="Mi lista de compras" aria-hidden="true">
+    <div class="panel-cabecera">
+      <div><span class="sobrelinea">TU SELECCIÓN</span><h2>Mi lista <span>de compras.</span></h2></div>
+      <button class="cerrar-panel" id="cerrarLista" aria-label="Cerrar panel">✕</button>
+    </div>
+    <p class="panel-intro">Aquí están los productos que has elegido.</p>
+
+    <div class="lista-productos" id="listaProductos"></div>
+
+    <div class="lista-vacia" id="listaVacia">
+      <span>🛍️</span>
+      <h3>¡Comienza tu lista!</h3>
+      <p>Agrega tus productos favoritos desde el catálogo.</p>
+      <button class="btn btn-azul" id="seguirComprando">Explorar catálogo</button>
+    </div>
+
+    <div class="resumen" id="resumen" hidden>
+      <div class="resumen-fila"><span>Unidades seleccionadas</span><strong id="cantidadTotal">0</strong></div>
+      <div class="resumen-total"><span>Total estimado</span><strong id="precioTotal">$0</strong></div>
+      <p class="nota-precio">Los precios son de referencia y deben confirmarse con la librería.</p>
+      <button class="btn-whatsapp" id="enviarPedido">💬 Enviar pedido por WhatsApp</button>
+      <button class="vaciar-lista" id="vaciarLista">Vaciar toda la lista</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
